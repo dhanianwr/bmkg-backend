@@ -1,0 +1,174 @@
+get http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJEaGFuaSIsImVtYWlsIjoiZW1haWxAZ21haWwuY29tIiwiaWF0IjoxNzAyMzA4MzAwLCJleHAiOjE3MDIzMDgzMTV9.p_3dradsy1Da_gv-g_K98bUDoko0vSpANduSIZS2tys
+###
+post http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name" : "Dhani Anwar",
+    "nip" : "197502181997031003",
+    "password" : "admin123",
+    "confPassword" : "admin123"
+}
+
+###
+
+post http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "nip" : "197502181997031003",
+    "password" : "admin123"
+}
+
+###
+GET http://localhost:5000/token
+
+###
+DELETE http://localhost:5000/logout
+
+###
+POST http://localhost:5000/pegawai
+    Content-Type: application/json
+
+    {
+        "nama": "TES2",
+        "nip": "197502181997031003",
+        "jabatan": "admin",
+        "pangkat": "admin"
+    }
+###
+GET http://localhost:5000/cuaca-besok
+
+
+###
+PATCH http://localhost:5000/pegawai/4
+Content-Type: application/json
+
+    {
+        "nama": "TES1 edit",
+        "nip": "123456",
+        "jabatan": "asdasd",
+        "pangkat": "asdasd"
+    }
+
+###
+DELETE http://localhost:5000/pegawai/2
+
+
+###
+GET http://localhost:5000/wisata-besok
+
+###
+POST http://localhost:5000/wisata
+Content-Type: application/json
+
+    {
+        "weather": "TES 2",
+        "wind": "12KM barat Daya",
+        "temp": "12 Derajat",
+        "humidity": "13 Derajat",
+        "wave": "2 Meter",
+        "height": "2feet"
+    }
+
+###
+PATCH http://localhost:5000/wisata/1
+Content-Type: application/json
+
+    {
+        "weather": "TES Edit",
+        "wind": "12KM barat Daya",
+        "temp": "12 Derajat",
+        "humidity": "13 Derajat",
+        "wave": "2 Meter",
+        "height": "2feet"
+    }
+    
+###
+DELETE  http://localhost:5000/wisata/1
+
+###
+GET http://localhost:5000/kritik-saran
+
+###
+POST http://localhost:5000/kritik-saran
+Content-Type: application/json
+
+    {
+        "nama": "TES",
+        "email": "sdsadasd@gmail.com",
+        "nohp": "08193983834",
+        "kritik": "asdasd asd as dasd sa dasd",
+        "saran": "adasdasdasdsd asd asd sa a sd"
+    }
+
+###
+PATCH http://localhost:5000/wisata-besok/1
+Content-Type: application/json
+
+    {
+        "weather": "TES Edit",
+        "wind": "12KM barat Daya",
+        "temp": "12 Derajat",
+        "humidity": "13 Derajat",
+        "wave": "2 Meter",
+        "height": "2feet"
+    }
+    
+###
+DELETE  http://localhost:5000/wisata-besok/1
+
+###
+
+GET http://localhost:5000/peringatan
+
+
+###
+POST http://localhost:5000/peringatan
+Content-Type: application/json
+
+{
+    "peringatan":"Semua Baik Baik Saja :)",
+    "tanggal":"13 Desember 2023"
+}
+
+###
+
+PATCH  http://localhost:5000/peringatan/1
+Content-Type: application/json
+
+{
+    "peringatan":"Semua Baik Baik Saja :), Ini Adalah Edit",
+    "tanggal":"15 Desember 2023"
+}
+
+###
+DELETE http://localhost:5000/peringatan/2
+
+###
+POST http://localhost:5000/peringatan
+Content-Type: application/json
+
+    {
+        "peringatan":"Telah Terjadi Gelombang Tinggi di Selat Bali Setinggi 3 Meter",
+        "tanggal": "20 Desember 2023"
+    }
+
+###
+Get http://localhost:5000/wisata?name
+
+###
+DELETE    http://localhost:5000/kritik-saran/2
+
+###
+Get http://localhost:5000/normal-musim
+
+###
+POST  http://localhost:5000/normal-musim
+Content-Type: application/json
+
+    {
+        "name":"Telah Terjadi Gelombang Tinggi di Selat Bali Setinggi 3 Meter",
+        "tanggal": "20 Desember 2023"
+    }

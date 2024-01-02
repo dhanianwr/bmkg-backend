@@ -1,0 +1,141 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Image {
+ id        Int      @id @default(autoincrement())
+ name      String
+ foto      String
+ url       String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+}
+
+model BuletinTable {
+  id        Int   @id @default(autoincrement())
+  name      String
+  buletin   String
+  url       String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model berita {
+  id        Int   @id @default(autoincrement())
+  judul     String
+  tanggal   DateTime @db.Date
+  isi       String   @db.VarChar(20000)
+  gambar    String
+  url       String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model pegawai {
+  id        Int     @id @default(autoincrement())
+  nama      String
+  nip       String
+  pangkat   String
+  jabatan   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model cuacahariini {
+ id        Int      @id @default(autoincrement())
+ name      DateTime @db.Date
+ foto      String
+ url       String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+}
+
+model tourism {
+ id        Int      @id @default(autoincrement())
+ name      DateTime @db.Date
+ foto      String
+ url       String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+}
+
+model analisiscurahhujan {
+ id        Int      @id @default(autoincrement())
+ name      DateTime @db.Date
+ foto      String
+ url       String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+}
+
+model analisissifathujan {
+ id        Int      @id @default(autoincrement())
+ name      DateTime @db.Date
+ foto      String
+ url       String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+}
+
+model prakiraancurahhujan {
+ id        Int      @id @default(autoincrement())
+ name      DateTime @db.Date
+ foto      String
+ url       String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+}
+
+model haritanpahujan {
+ id        Int      @id @default(autoincrement())
+ name      DateTime @db.Date
+ foto      String
+ url       String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+}
+
+model normalmusim {
+ id        Int      @id @default(autoincrement())
+ name      DateTime @db.Date
+ foto      String
+ url       String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+}
+
+model kritiksaran {
+  id          Int   @id @default(autoincrement())
+  nama        String 
+  email       String 
+  nohp        String
+  kritik      String
+  saran       String
+  createAt    DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model cuacabesok {
+ id        Int      @id @default(autoincrement())
+ name      DateTime @db.Date
+ foto      String
+ url       String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+}
+
+model peringatandini {
+  id          Int @id @default(autoincrement())
+  tanggal     DateTime @db.Date
+  peringatan  String
+  createdAt   DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
